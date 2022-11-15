@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Calc {
-    private static int choice = 0;
+    private static int counter = 0;
         public static void playCalc() {
             int[] arrayNum = new int[2];
             for (int i = 0; i < arrayNum.length; i++)
@@ -39,10 +39,11 @@ public class Calc {
             if (summaUser == summa)
             {
                 System.out.println("Correct!");
-                choice++;
-                if (choice == 3)
+                counter++;
+                if (counter == 3)
                 {
                     System.out.println("Congratulations, " + Cli.name + "!");
+                    counter = 0;
                     return;
                 }
 
