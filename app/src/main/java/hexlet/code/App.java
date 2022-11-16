@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD \n0 - Exit");
+        System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n0 - Exit");
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -25,9 +25,13 @@ public class App {
                    System.out.println("Find the greatest common divisor of given numbers.");
                    GCD.playGCD();
                    break;
+               case  5:
+                   System.out.println("What number is missing in the progression?");
+                   Progression.Prog();
+                   break;
                case 0: return;
            }
-            System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD \n0 - Exit");
+            System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression \n0 - Exit");
 
 
         }

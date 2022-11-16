@@ -34,8 +34,9 @@ public class GCD {
         }
         else {
             System.out.println("'" + userGCD + "'is wrong answer ;(. Correct answer was '"
-                    + gcd(arrayNum[0],arrayNum[1]) + ".");
+                    + gcd(arrayNum[0],arrayNum[1]) + "'.");
             System.out.println("Let's try again, " + Cli.name);
+            counter=0;
             return;
         }
         playGCD();
