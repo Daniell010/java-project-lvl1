@@ -1,13 +1,13 @@
 package hexlet.code;
 
-
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
-        System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n0 - Exit");
+        System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         Scanner scanner = new Scanner(System.in);
+
 
         while (true) {
            var number = scanner.nextInt();
@@ -29,10 +29,14 @@ public class App {
                    System.out.println("What number is missing in the progression?");
                    Progression.Prog();
                    break;
+               case 6:
+                   System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+                   Prime.playPrime();
+                   break;
                case 0: return;
            }
-            System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression \n0 - Exit");
-
+            System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
+            System.out.print("Your choice:");
 
         }
     }
