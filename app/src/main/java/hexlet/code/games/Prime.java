@@ -11,8 +11,8 @@ public class Prime {
 
     public static boolean checkSimple(int i) {
         final int three = 3;
-        int n;
-        n = 2 + 3;
+        final int two = 2;
+        int n = three + two;
         if (i <= 1) {
             return false;
         } else if (i <= three) {
