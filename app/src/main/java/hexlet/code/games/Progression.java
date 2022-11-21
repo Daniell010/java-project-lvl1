@@ -18,9 +18,9 @@ public class Progression {
         final int TEN = 10;
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
             task[k] ="";
-        int initialNumber = (int) (Math.random() * ((MAX_VAL - MIN_VAL) + MIN_VAL)) + MIN_VAL; // начально число
-        int hiddenNumber = (int) (Math.random() * ((MAX_VAL - MIN_HIDDEN) + MIN_HIDDEN)); // скрытое число
-        int step = (int) (Math.random() * ((FIVE - MIN_HIDDEN) + MIN_HIDDEN)) + MIN_VAL; // шаг
+            int initialNumber = (int) (Math.random() * ((10 - 1) + 1)) + 1; // начально число
+            int hiddenNumber = (int) (Math.random() * ((10 - 2) + 2)); // скрытое число
+            int step = (int) (Math.random() * ((5 - 2) + 2)) + 1; // шаг
         var sequence = 0;
 
             for (int i = 0; i < TEN; i++) {
