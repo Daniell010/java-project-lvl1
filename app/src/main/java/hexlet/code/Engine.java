@@ -21,7 +21,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Calc.summa[i] + "'.");
-                System.out.println("Congratulations, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
 
@@ -43,7 +43,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Even.even[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name);
+                System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
         }
@@ -63,7 +63,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + GCD.arrayGCD[i] + "'.");
-                System.out.println("Congratulations, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
         }
@@ -83,7 +83,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Prime.arrayPrime[i] + "'.");
-                System.out.println("Congratulations, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
 
@@ -104,7 +104,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Progression.answers[i] + "'.");
-                System.out.println("Congratulations, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.name + "!");
                 return;
             }
         }
