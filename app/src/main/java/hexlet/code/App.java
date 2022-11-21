@@ -9,9 +9,8 @@ public class App {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet \n2 - Even\n3 - Calc\n4 - GCD\n5 - Progression\n6 - Prime\n0 - Exit");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Your choice:");
+        System.out.print("Your choice: ");
         var number = scanner.nextInt();
-
         processUserChoice(number);
         scanner.close();
 
