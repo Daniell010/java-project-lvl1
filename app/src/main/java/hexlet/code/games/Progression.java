@@ -12,7 +12,7 @@ public class Progression {
 
     public static void prog() {
         final int MAX_VAL = 10;
-        final int MIN_HIDDEN = 2;
+        final int MIN_HIDDEN = 3;
         final int FIVE = 5;
         final int MIN_VAL = 1;
         final int TEN = 10;
