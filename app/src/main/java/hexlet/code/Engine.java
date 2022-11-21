@@ -68,7 +68,7 @@ public class Engine {
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name);
+        System.out.println("Congratulations, " + Cli.name + "!");
     }
     public static void primePlay() {
         Cli.writeName();
@@ -89,7 +89,7 @@ public class Engine {
 
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name);
+        System.out.println("Congratulations, " + Cli.name + "!");
     }
     public static void progPlay() {
         Cli.writeName();
@@ -109,6 +109,6 @@ public class Engine {
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name);
+        System.out.println("Congratulations, " + Cli.name + "!");
     }
 }
