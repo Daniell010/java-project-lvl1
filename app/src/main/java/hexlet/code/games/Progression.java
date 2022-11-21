@@ -1,9 +1,9 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
+import java.util.Random;
+
 
 public class Progression {
     private static String question = "What number is missing in the progression?";
@@ -11,16 +11,13 @@ public class Progression {
     private static int[] answers = new int[Engine.getVictoryCount()];
 
     public static void prog() {
-        final int MAX_VAL = 10;
-        final int MIN_HIDDEN = 3;
-        final int FIVE = 5;
-        final int MIN_VAL = 1;
+        Random random = new Random();
         final int TEN = 10;
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
             task[k] ="";
-            int initialNumber = (int) (Math.random() * ((10 - 1) + 1)) + 1; // начально число
-            int hiddenNumber = (int) (Math.random() * ((10 - 2) + 2)); // скрытое число
-            int step = (int) (Math.random() * ((5 - 2) + 2)) + 1; // шаг
+            int initialNumber = random.nextInt(10) + 1; // начально число
+            int hiddenNumber = random.nextInt(8) + 2; // скрытое число
+            int step = random.nextInt(5) + 2; // шаг
         var sequence = 0;
 
             for (int i = 0; i < TEN; i++) {
