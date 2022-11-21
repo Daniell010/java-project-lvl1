@@ -11,7 +11,8 @@ public class Prime {
 
     public static boolean checkSimple(int i) {
         final int three = 3;
-        int n = 5;
+        int n;
+        n = 5;
         if (i <= 1) {
             return false;
         } else if (i <= three) {
@@ -55,4 +56,5 @@ public class Prime {
     public static String[] getArrayPrime() {
         return arrayPrime;
     }
+
 }

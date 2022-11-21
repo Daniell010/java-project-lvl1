@@ -40,4 +40,5 @@ public class GCD {
     public static int[] getArrayGCD() {
         return arrayGCD;
     }
+
 }

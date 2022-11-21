@@ -14,7 +14,6 @@ import java.util.Scanner;
 
 public class Engine {
     private static final int VICTORYCOUNT = 3;
-
     public static int getVictoryCount() {
         return VICTORYCOUNT;
     }
