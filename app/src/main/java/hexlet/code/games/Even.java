@@ -1,64 +1,23 @@
 package hexlet.code.games;
-
-import hexlet.code.games.Cli;
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
 public class Even {
-    public static void playEven()
-    {
-        Scanner scanner = new Scanner(System.in);
-        var choice = 0;
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        while (true)
-        {
-            var x =(int)(Math.random()*((100-1)+1))+1;
-            var ev = x % 2 == 0;
-            System.out.println("Question: " + x);
-            var a = scanner.next();
-            if(a.equals("yes")) // сравниваем ввод пользовтеля
-            {
-                if(ev)  // четное?
-                {
-                    System.out.println("Correct!");
-                    choice++;
-                    if (choice == 3)
-                    {
-                        System.out.println("Congratulations, " + Cli.name);
-                        return;
-                    }
-                }
-                else
-                {
-                    System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
-                    return;
-                }
-            }
-            else if (a.equals("no"))
-            {
-                if(!ev)  //нечетное?
-                {
-                        System.out.println("Correct!");
-                        choice++;
-                        if (choice == 3) {
-                            System.out.println("Congratulations, " + Cli.name);
-                            return;
-                        }
-                }
-                else
-                {
-                    System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.");
-                    return;
-                }
-            }
-            else
-            {
-                System.out.println("'" + a + "' is wrong answer ;(. Correct answer was 'no'.");
-                return;
-            }
+    public static String[] even = new String[3];
+    public static String[] task = new String[3];
+    public static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
+    public static void playEven() {
+        for (int i = 0; i < 3; i++) {
+            var x = (int) (Math.random() * ((100 - 1) + 1)) + 1;
+            even[i] = x % 2 == 0? "yes" : "no";
+            task[i] = ("Question: " + x);
         }
-
-
+        Engine.evenPlay();
     }
 }
+
+
+
+

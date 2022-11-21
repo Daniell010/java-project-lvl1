@@ -1,11 +1,14 @@
 package hexlet.code.games;
-
-import hexlet.code.games.Cli;
+import hexlet.code.Cli;
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
 public class Prime {
-    private static int counter;
+    public static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static  String[] task = new String[3];
+    public static String[] arrayPrime = new String[3];
+
 
     public static boolean checkSimple(int i) {
         if (i <= 1)
@@ -24,46 +27,15 @@ public class Prime {
     }
 
     public static void playPrime() {
-        int randomNumber = (int) (Math.random() * ((10 - 1) + 1));
-        System.out.println("Question: " + randomNumber);
-        System.out.print("Your answer: ");
-        Scanner scanner = new Scanner(System.in);
-        String userInput = scanner.next();
-
-        if (userInput.equals("yes")) {
-            if (checkSimple(randomNumber)) {
-                System.out.println("Correct!");
-                counter++;
-                if(counter == 3)
-                {
-                    System.out.println("Congratulations, " + Cli.name);
-                    counter = 0;
-                    return;
-                }
-
-            } else {
-                System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + Cli.name);
-                counter = 0;
-                return;
+        for (int i = 0; i < 3; i++) {
+            int randomNumber = (int) (Math.random() * ((10 - 1) + 1));
+            task[i] = ("Question: " + randomNumber);
+            if(checkSimple(randomNumber))
+            {
+                arrayPrime[i] = "yes";
             }
-        } else if (userInput.equals("no")) {
-            if (!checkSimple(randomNumber)) {
-                System.out.println("Correct!");
-                counter++;
-                if(counter == 3)
-                {
-                    System.out.println("Congratulations, " + Cli.name);
-                    counter = 0;
-                    return;
-                }
-            } else {
-                System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again, " + Cli.name);
-                counter = 0;
-                return;
-            }
+            else arrayPrime[i] = "no";
         }
-        playPrime();
+        Engine.primePlay();
     }
 }
