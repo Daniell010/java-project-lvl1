@@ -72,7 +72,7 @@ public class Engine {
     }
     public static void primePlay() {
         Cli.writeName();
-        System.out.println(Calc.question);
+        System.out.println(Prime.question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < VICTORY_COUNT; i++) {
             System.out.println(Prime.task[i]);
@@ -93,7 +93,7 @@ public class Engine {
     }
     public static void progPlay() {
         Cli.writeName();
-        System.out.println(Calc.question);
+        System.out.println(Progression.question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < VICTORY_COUNT; i++) {
             System.out.println(Progression.task[i]);
