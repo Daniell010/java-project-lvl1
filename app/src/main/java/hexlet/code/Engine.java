@@ -1,60 +1,64 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
 public class Engine {
-    private static int VICTORY_COUNT = 3;
+    private static final int victoryCount = 3;
 
     public static void calcPlay() {
         Cli.writeName();
-        System.out.println(Calc.question);
+        System.out.println(Calc.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < VICTORY_COUNT; i++) {
-            System.out.println(Calc.stringOfNumbers[i]);
+        for (int i = 0; i < victoryCount; i++) {
+            System.out.println(Calc.getStringOfNumbers()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
-            if (userInput == Calc.summa[i]) {
+            if (userInput == Calc.getSumma()[i]) {
                 System.out.println("Correct!");
 
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
-                        + Calc.summa[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                        + Calc.getSumma()[i] + "'.");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
 
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
 
     }
     public static void evenPlay() {
         Cli.writeName();
-        System.out.println(Even.question);
+        System.out.println(Even.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < VICTORY_COUNT; i++) {
-            System.out.println(Even.task[i]);
+        for (int i = 0; i < victoryCount; i++) {
+            System.out.println(Even.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.next();
-            if (userInput.equals(Even.even[i])) {
+            if (userInput.equals(Even.getEven()[i])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
-                        + Even.even[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                        + Even.getEven()[i] + "'.");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
-    public static void GCDplay() {
+    public static void gcdPlay() {
         Cli.writeName();
         System.out.println(GCD.question);
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < VICTORY_COUNT; i++) {
+        for (int i = 0; i < victoryCount; i++) {
             System.out.println(GCD.task[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
@@ -63,18 +67,18 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + GCD.arrayGCD[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
     public static void primePlay() {
         Cli.writeName();
         System.out.println(Prime.question);
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < VICTORY_COUNT; i++) {
+        for (int i = 0; i < victoryCount; i++) {
             System.out.println(Prime.task[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.next();
@@ -83,19 +87,19 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Prime.arrayPrime[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
 
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
     public static void progPlay() {
         Cli.writeName();
         System.out.println(Progression.question);
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < VICTORY_COUNT; i++) {
+        for (int i = 0; i < victoryCount; i++) {
             System.out.println(Progression.task[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
@@ -104,11 +108,12 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + Progression.answers[i] + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
+
     }
 }

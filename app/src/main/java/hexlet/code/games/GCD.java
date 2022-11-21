@@ -25,6 +25,6 @@ public class GCD {
             arrayGCD[k] = gcd(arrayNum[0],arrayNum[1]);
 
         }
-        Engine.GCDplay();
+        Engine.gcdPlay();
     }
 }

@@ -3,9 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
-    public static String question = "What is the result of the expression?";
-    public static String[] stringOfNumbers = new String[3];
-    public static int[] summa = new int[3];
+    private static String question = "What is the result of the expression?";
+    private static String[] stringOfNumbers = new String[3];
+    private static int[] summa = new int[3];
 
     public static void playCalc() {
         for (int k =0; k < 3; k++){
@@ -35,6 +35,18 @@ public class Calc {
 
         }
         Engine.calcPlay();
+    }
+
+    public static int[] getSumma() {
+        return summa;
+    }
+
+    public static String getQuestion() {
+        return question;
+    }
+
+    public static String[] getStringOfNumbers() {
+        return stringOfNumbers;
     }
 }
 

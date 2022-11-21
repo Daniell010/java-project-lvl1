@@ -1,6 +1,10 @@
 package hexlet.code;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
-import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -16,23 +20,32 @@ public class App {
 
 
     }
-    private static void processUserChoice(int userChoice)
-    {
-           switch (userChoice)
-           {
-               case 1: Cli.writeName();
+    private static void processUserChoice(int userChoice) {
+        final var one = 1;
+        final var two = 2;
+        final var three = 3;
+        final var four = 4;
+        final var five = 5;
+        final var six = 6;
+        final var zero = 0;
+
+           switch (userChoice) {
+               case one: Cli.writeName();
                break;
-               case 2: Even.playEven();
+               case two: Even.playEven();
                break;
-               case 3: Calc.playCalc();
+               case three: Calc.playCalc();
                break;
-               case 4: GCD.playGCD();
+               case four: GCD.playGCD();
                break;
-               case 5: Progression.Prog();
+               case five: Progression.Prog();
                break;
-               case 6: Prime.playPrime();
+               case six: Prime.playPrime();
                break;
-               case 0: return;
+               case zero: return;
+               default:
+                   System.out.println("there is no such choice");
+                   return;
 
         }
     }
