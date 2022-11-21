@@ -14,7 +14,7 @@ public class Progression {
         for (int k = 0; k < 3; k++) {
             task[k] ="";
         int initialNumber = (int) (Math.random() * ((10 - 1) + 1)) + 1; // начально число
-        int hiddenNumber = (int) (Math.random() * ((10 - 1) + 1)); // скрытое число
+        int hiddenNumber = (int) (Math.random() * ((10 - 2) + 2)); // скрытое число
         int step = (int) (Math.random() * ((5 - 2) + 2)) + 1; // шаг
         var sequence = 0;
 
