@@ -38,7 +38,7 @@ public class App {
                break;
                case four: GCD.playGCD();
                break;
-               case five: Progression.Prog();
+               case five: Progression.prog();
                break;
                case six: Prime.playPrime();
                break;

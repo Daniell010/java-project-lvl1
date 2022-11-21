@@ -1,6 +1,6 @@
 # Default ignored files
 /shelf/
 /.idea/workspace.xml
-app/.gradle/
-app/.idea/
-app/build/
+.gradle/
+.idea/
+build/

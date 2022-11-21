@@ -11,6 +11,10 @@ import java.util.Scanner;
 public class Engine {
     private static final int victoryCount = 3;
 
+    public static int getVictoryCount() {
+        return victoryCount;
+    }
+
     public static void calcPlay() {
         Cli.writeName();
         System.out.println(Calc.getQuestion());
@@ -56,17 +60,17 @@ public class Engine {
     }
     public static void gcdPlay() {
         Cli.writeName();
-        System.out.println(GCD.question);
+        System.out.println(GCD.getQuestion());
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < victoryCount; i++) {
-            System.out.println(GCD.task[i]);
+            System.out.println(GCD.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
-            if (userInput == GCD.arrayGCD[i]) {
+            if (userInput == GCD.getArrayGCD()[i]) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
-                        + GCD.arrayGCD[i] + "'.");
+                        + GCD.getArrayGCD()[i] + "'.");
                 System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
@@ -76,17 +80,17 @@ public class Engine {
     }
     public static void primePlay() {
         Cli.writeName();
-        System.out.println(Prime.question);
+        System.out.println(Prime.getQuestion());
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < victoryCount; i++) {
-            System.out.println(Prime.task[i]);
+            System.out.println(Prime.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.next();
-            if (userInput.equals(Prime.arrayPrime[i])) {
+            if (userInput.equals(Prime.getArrayPrime()[i])) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
-                        + Prime.arrayPrime[i] + "'.");
+                        + Prime.getArrayPrime()[i] + "'.");
                 System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
@@ -97,17 +101,17 @@ public class Engine {
     }
     public static void progPlay() {
         Cli.writeName();
-        System.out.println(Progression.question);
+        System.out.println(Progression.getQuestion());
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < victoryCount; i++) {
-            System.out.println(Progression.task[i]);
+            System.out.println(Progression.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
-            if (userInput == Progression.answers[i]) {
+            if (userInput == Progression.getAnswers()[i]) {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
-                        + Progression.answers[i] + "'.");
+                        + Progression.getAnswers()[i] + "'.");
                 System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }

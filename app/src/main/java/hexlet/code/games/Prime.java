@@ -1,13 +1,12 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
+
 import hexlet.code.Engine;
 
-import java.util.Scanner;
 
 public class Prime {
-    public static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static  String[] task = new String[3];
-    public static String[] arrayPrime = new String[3];
+    private static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static  String[] task = new String[Engine.getVictoryCount()];
+    private static String[] arrayPrime = new String[Engine.getVictoryCount()];
 
 
     public static boolean checkSimple(int i) {
@@ -27,8 +26,10 @@ public class Prime {
     }
 
     public static void playPrime() {
-        for (int i = 0; i < 3; i++) {
-            int randomNumber = (int) (Math.random() * ((10 - 1) + 1));
+        final int MAX_VAL = 10;
+        final int MIN_VAL = 1;
+        for (int i = 0; i < Engine.getVictoryCount(); i++) {
+            int randomNumber = (int) (Math.random() * ((MAX_VAL - MIN_VAL) + MIN_VAL));
             task[i] = ("Question: " + randomNumber);
             if(checkSimple(randomNumber))
             {
@@ -37,5 +38,17 @@ public class Prime {
             else arrayPrime[i] = "no";
         }
         Engine.primePlay();
+    }
+
+    public static String getQuestion() {
+        return question;
+    }
+
+    public static String[] getTask() {
+        return task;
+    }
+
+    public static String[] getArrayPrime() {
+        return arrayPrime;
     }
 }

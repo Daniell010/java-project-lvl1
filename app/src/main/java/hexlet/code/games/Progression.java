@@ -6,19 +6,24 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 
 public class Progression {
-    public static String question = "What number is missing in the progression?";
-    public static String[] task = new String[3];
-    public static int[] answers = new int[3];
+    private static String question = "What number is missing in the progression?";
+    private static String[] task = new String[Engine.getVictoryCount()];
+    private static int[] answers = new int[Engine.getVictoryCount()];
 
-    public static void Prog() {
-        for (int k = 0; k < 3; k++) {
+    public static void prog() {
+        final int MAX_VAL = 10;
+        final int MIN_HIDDEN = 10;
+        final int FIVE = 5;
+        final int MIN_VAL = 1;
+        final int TEN = 10;
+        for (int k = 0; k < Engine.getVictoryCount(); k++) {
             task[k] ="";
-        int initialNumber = (int) (Math.random() * ((10 - 1) + 1)) + 1; // начально число
-        int hiddenNumber = (int) (Math.random() * ((10 - 2) + 2)); // скрытое число
-        int step = (int) (Math.random() * ((5 - 2) + 2)) + 1; // шаг
+        int initialNumber = (int) (Math.random() * ((MAX_VAL - MIN_VAL) + MIN_VAL)) + MIN_VAL; // начально число
+        int hiddenNumber = (int) (Math.random() * ((MAX_VAL - MIN_HIDDEN) + MIN_HIDDEN)); // скрытое число
+        int step = (int) (Math.random() * ((FIVE - MIN_HIDDEN) + MIN_HIDDEN)) + MIN_VAL; // шаг
         var sequence = 0;
 
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < TEN; i++) {
                 if (i == hiddenNumber) {
                     task[k] += ".. ";
                     answers[k] = sequence + step;
@@ -28,10 +33,24 @@ public class Progression {
                 if (i == 0) {
                     task[k] += "Question: ";
                     sequence = initialNumber;
-                } else sequence = sequence + step;
+                } else {
+                    sequence = sequence + step;
+                }
                 task[k] += sequence + " ";
             }
         }
         Engine.progPlay();
+    }
+
+    public static String[] getTask() {
+        return task;
+    }
+
+    public static String getQuestion() {
+        return question;
+    }
+
+    public static int[] getAnswers() {
+        return answers;
     }
 }
