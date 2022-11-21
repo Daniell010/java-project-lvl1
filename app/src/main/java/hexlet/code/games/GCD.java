@@ -14,14 +14,13 @@ public class GCD {
         }
         return a;
     }
-    public static void playGCD ()
-    {
+    public static void playGCD(){
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
             int[] arrayNum = new int[2];
-            final int MAX_VAL = 100;
-            final int MIN_VAL = 1;
+            final int maxVal = 100;
+            final int minVal = 1;
             for (int i = 0; i < arrayNum.length; i++) {
-                arrayNum[i] = (int) (Math.random() * ((MAX_VAL - MIN_VAL) + MIN_VAL)) + MIN_VAL;
+                arrayNum[i] = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             }
             task[k] = "Question: " + arrayNum[0] + " " + arrayNum[1];
             arrayGCD[k] = gcd(arrayNum[0], arrayNum[1]);

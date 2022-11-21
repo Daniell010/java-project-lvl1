@@ -7,28 +7,31 @@ public class Calc {
     private static String[] stringOfNumbers = new String[Engine.getVictoryCount()];
     private static int[] summa = new int[Engine.getVictoryCount()];
 
-    public static void playCalc() {
+    public static void playCalc(){
         for (int k = 0; k < Engine.getVictoryCount(); k++){
             int[] arrayOfResponses = new int[2];
-            final int MAX_VAL = 20;
-            final int MIN_VAL = 1;
-            final int MAX_OP = 3;
+            final int maxVal = 20;
+            final int minVal = 1;
+            final int maxOp = 3;
             for (int i = 0; i < arrayOfResponses.length; i++) {
-                arrayOfResponses[i] = (int) (Math.random() * ((MAX_VAL - MIN_VAL) + MIN_VAL)) + MIN_VAL;
+                arrayOfResponses[i] = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             }
 
-            var operator = (int) (Math.random() * ((MAX_OP - MIN_VAL) + MIN_VAL)) + MIN_VAL;
+            var operator = (int) (Math.random() * ((maxOp - minVal) + minVal)) + minVal;
+            final var one = 1;
+            final var two = 2;
+            final var three = 3;
 
             switch (operator) {
-                case 1:
+                case one:
                     stringOfNumbers[k] = "Question: " + arrayOfResponses[0] + " + " + arrayOfResponses[1];
                     summa[k] = arrayOfResponses[0] + arrayOfResponses[1];
                     break;
-                case 2:
+                case two:
                     stringOfNumbers[k] = "Question: " + arrayOfResponses[0] + " - " + arrayOfResponses[1];
                     summa[k] = arrayOfResponses[0] - arrayOfResponses[1];
                     break;
-                case 3:
+                case three:
                     stringOfNumbers[k] = "Question: " + arrayOfResponses[0] + " * " + arrayOfResponses[1];
                     summa[k] = arrayOfResponses[0] * arrayOfResponses[1];
                     break;

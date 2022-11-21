@@ -9,17 +9,17 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int victoryCount = 3;
+    private static final int VICTORYCOUNT = 3;
 
     public static int getVictoryCount() {
-        return victoryCount;
+        return VICTORYCOUNT;
     }
 
     public static void calcPlay() {
         Cli.writeName();
         System.out.println(Calc.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < victoryCount; i++) {
+        for (int i = 0; i < VICTORYCOUNT; i++) {
             System.out.println(Calc.getStringOfNumbers()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
@@ -42,7 +42,7 @@ public class Engine {
         Cli.writeName();
         System.out.println(Even.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < victoryCount; i++) {
+        for (int i = 0; i < VICTORYCOUNT; i++) {
             System.out.println(Even.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.next();
@@ -62,7 +62,7 @@ public class Engine {
         Cli.writeName();
         System.out.println(GCD.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < victoryCount; i++) {
+        for (int i = 0; i < VICTORYCOUNT; i++) {
             System.out.println(GCD.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();
@@ -82,7 +82,7 @@ public class Engine {
         Cli.writeName();
         System.out.println(Prime.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < victoryCount; i++) {
+        for (int i = 0; i < VICTORYCOUNT; i++) {
             System.out.println(Prime.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.next();
@@ -103,7 +103,7 @@ public class Engine {
         Cli.writeName();
         System.out.println(Progression.getQuestion());
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < victoryCount; i++) {
+        for (int i = 0; i < VICTORYCOUNT; i++) {
             System.out.println(Progression.getTask()[i]);
             System.out.print("Your answer: ");
             var userInput = scanner.nextInt();

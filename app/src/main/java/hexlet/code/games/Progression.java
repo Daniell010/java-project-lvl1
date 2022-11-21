@@ -12,15 +12,20 @@ public class Progression {
 
     public static void prog() {
         Random random = new Random();
-        final int TEN = 10;
+        final int ten = 10;
+        final int maxVal = 10;
+        final int minHiden = 2;
+        final int eight = 8;
+        final int five = 5;
+        final int minVal = 1;
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
             task[k] ="";
-            int initialNumber = random.nextInt(10) + 1; // начально число
-            int hiddenNumber = random.nextInt(8) + 2; // скрытое число
-            int step = random.nextInt(5) + 2; // шаг
+            int initialNumber = random.nextInt(maxVal) + minVal; // начально число
+            int hiddenNumber = random.nextInt(eight) + minHiden; // скрытое число
+            int step = random.nextInt(five) + minHiden; // шаг
         var sequence = 0;
 
-            for (int i = 0; i < TEN; i++) {
+            for (int i = 0; i < ten; i++) {
                 if (i == hiddenNumber) {
                     task[k] += ".. ";
                     answers[k] = sequence + step;
