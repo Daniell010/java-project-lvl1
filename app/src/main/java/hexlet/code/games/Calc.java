@@ -7,8 +7,8 @@ public class Calc {
     private static String[] stringOfNumbers = new String[Engine.getVictoryCount()];
     private static int[] summa = new int[Engine.getVictoryCount()];
 
-    public static void playCalc(){
-        for (int k = 0; k < Engine.getVictoryCount(); k++){
+    public static void playCalc() {
+        for (int k = 0; k < Engine.getVictoryCount(); k++) {
             int[] arrayOfResponses = new int[2];
             final int maxVal = 20;
             final int minVal = 1;

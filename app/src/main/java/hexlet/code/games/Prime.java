@@ -11,16 +11,15 @@ public class Prime {
 
     public static boolean checkSimple(int i) {
         final int three = 3;
+        int n = 5;
         if (i <= 1) {
             return false;
-        }
-        else if (i <= three) {
+        } else if (i <= three) {
             return true;
-        }
-        else if (i % 2 == 0 || i % 3== 0) {
+        } else if (i % 2 == 0 || i % three == 0) {
             return false;
         }
-        int n = 5;
+
         while (n * n <= i) {
             if (i % n == 0 || i % (n + 2) == 0) {
                 return false;
@@ -36,10 +35,9 @@ public class Prime {
         for (int i = 0; i < Engine.getVictoryCount(); i++) {
             int randomNumber = (int) (Math.random() * ((maxVal - minVal) + minVal));
             task[i] = ("Question: " + randomNumber);
-            if(checkSimple(randomNumber)) {
+            if (checkSimple(randomNumber)) {
                 arrayPrime[i] = "yes";
-            }
-            else {
+            } else {
                 arrayPrime[i] = "no";
             }
         }

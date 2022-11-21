@@ -19,7 +19,7 @@ public class Progression {
         final int five = 5;
         final int minVal = 1;
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
-            task[k] ="";
+            task[k] = "";
             int initialNumber = random.nextInt(maxVal) + minVal; // начально число
             int hiddenNumber = random.nextInt(eight) + minHiden; // скрытое число
             int step = random.nextInt(five) + minHiden; // шаг

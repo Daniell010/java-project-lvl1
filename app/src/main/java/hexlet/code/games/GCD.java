@@ -14,7 +14,7 @@ public class GCD {
         }
         return a;
     }
-    public static void playGCD(){
+    public static void playGCD() {
         for (int k = 0; k < Engine.getVictoryCount(); k++) {
             int[] arrayNum = new int[2];
             final int maxVal = 100;
