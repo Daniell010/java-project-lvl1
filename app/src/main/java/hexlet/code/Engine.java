@@ -6,7 +6,7 @@ public class Engine {
     public static final int COUNT_ROUNDS = 3;
 
     public static void calcPlay(String question, String[] stringOfNumbers, int[] summa) {
-        Cli.writeName();
+        var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -19,17 +19,17 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + summa[i] + "'.");
-                System.out.println("Let's try again, " + Cli.writeName() + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
 
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.writeName() + "!");
+        System.out.println("Congratulations, " + name + "!");
 
     }
     public static void evenPlay(String question, String[] task, String[] even) {
-        Cli.writeName();
+        var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -41,15 +41,15 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + even[i] + "'.");
-                System.out.println("Let's try again, " + Cli.writeName() + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.writeName() + "!");
+        System.out.println("Congratulations, " + name + "!");
     }
     public static void gcdPlay(String question, String[] task, int[] arrayGCD ) {
-        Cli.writeName();
+        var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -61,15 +61,15 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + arrayGCD[i] + "'.");
-                System.out.println("Let's try again, " + Cli.writeName() + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.writeName() + "!");
+        System.out.println("Congratulations, " + name + "!");
     }
     public static void primePlay(String question, String[] task, String[] arrayPrime) {
-        Cli.writeName();
+        var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -81,16 +81,16 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + arrayPrime[i] + "'.");
-                System.out.println("Let's try again, " + Cli.writeName() + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
 
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.writeName() + "!");
+        System.out.println("Congratulations, " + name + "!");
     }
     public static void progPlay(String question, String[] task, int[] answers) {
-        Cli.writeName();
+        var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
@@ -102,12 +102,12 @@ public class Engine {
             } else {
                 System.out.println("'" + userInput + "'is wrong answer ;(. Correct answer was '"
                         + answers[i] + "'.");
-                System.out.println("Let's try again, " + Cli.writeName() + "!");
+                System.out.println("Let's try again, " + name + "!");
                 return;
             }
         }
         scanner.close();
-        System.out.println("Congratulations, " + Cli.writeName() + "!");
+        System.out.println("Congratulations, " + name + "!");
 
     }
 }
