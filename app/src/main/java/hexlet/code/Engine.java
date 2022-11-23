@@ -48,7 +48,7 @@ public class Engine {
         scanner.close();
         System.out.println("Congratulations, " + name + "!");
     }
-    public static void gcdPlay(String question, String[] task, int[] arrayGCD ) {
+    public static void gcdPlay(String question, String[] task, int[] arrayGCD) {
         var name = Cli.writeName();
         System.out.println(question);
         Scanner scanner = new Scanner(System.in);

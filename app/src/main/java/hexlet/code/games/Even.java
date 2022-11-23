@@ -8,13 +8,9 @@ public class Even {
     private static String[] task = new String[Engine.COUNT_ROUNDS];
     private static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static boolean isEven(int x)
-    {
-        if(x % 2 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+    public static boolean isEven(int x) {
+        return (x % 2 == 0);
+
     }
     public static void playEven() {
         final int maxVal = 100;
