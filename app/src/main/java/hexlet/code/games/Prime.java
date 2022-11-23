@@ -5,11 +5,11 @@ import hexlet.code.Engine;
 
 public class Prime {
     private static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    private static  String[] task = new String[Engine.getVictoryCount()];
-    private static String[] arrayPrime = new String[Engine.getVictoryCount()];
+    private static  String[] task = new String[Engine.COUNT_ROUNDS];
+    private static String[] arrayPrime = new String[Engine.COUNT_ROUNDS];
 
 
-    public static boolean checkSimple(int i) {
+    public static boolean isPrime(int i)  {
         final int three = 3;
         final int two = 2;
         int n = three + two;
@@ -33,16 +33,16 @@ public class Prime {
     public static void playPrime() {
         final int maxVal = 100;
         final int minVal = 1;
-        for (int i = 0; i < Engine.getVictoryCount(); i++) {
+        for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int randomNumber = (int) (Math.random() * ((maxVal - minVal) + minVal));
             task[i] = ("Question: " + randomNumber);
-            if (checkSimple(randomNumber)) {
+            if (isPrime(randomNumber)) {
                 arrayPrime[i] = "yes";
             } else {
                 arrayPrime[i] = "no";
             }
         }
-        Engine.primePlay();
+        Engine.primePlay(question, task, arrayPrime);
     }
 
     public static String getQuestion() {

@@ -4,11 +4,11 @@ import hexlet.code.Engine;
 
 public class Calc {
     private static String question = "What is the result of the expression?";
-    private static String[] stringOfNumbers = new String[Engine.getVictoryCount()];
-    private static int[] summa = new int[Engine.getVictoryCount()];
+    private static String[] stringOfNumbers = new String[Engine.COUNT_ROUNDS];
+    private static int[] summa = new int[Engine.COUNT_ROUNDS];
 
     public static void playCalc() {
-        for (int k = 0; k < Engine.getVictoryCount(); k++) {
+        for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
             int[] arrayOfResponses = new int[2];
             final int maxVal = 20;
             final int minVal = 1;
@@ -42,7 +42,7 @@ public class Calc {
 
 
         }
-        Engine.calcPlay();
+        Engine.calcPlay(question, stringOfNumbers, summa);
     }
 
     public static int[] getSumma() {
