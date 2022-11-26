@@ -29,7 +29,6 @@ public class App {
                break;
                case "6": Prime.playPrime();
                break;
-               case "7": return;
                default:
                    System.out.println("there is no such choice");
                    return;

@@ -5,11 +5,12 @@ import java.util.Random;
 
 
 public class Progression {
-    private static String question = "What number is missing in the progression?";
-    private static String[] task = new String[Engine.COUNT_ROUNDS];
-    private static int[] answers = new int[Engine.COUNT_ROUNDS];
+
 
     public static void prog() {
+        String question = "What number is missing in the progression?";
+        String[][] questionAnswer = new String[3][2];
+
         Random random = new Random();
         final int ten = 10;
         final int maxVal = 10;
@@ -18,40 +19,32 @@ public class Progression {
         final int five = 5;
         final int minVal = 1;
         for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
-            task[k] = "";
             int initialNumber = random.nextInt(maxVal) + minVal; // начально число
             int hiddenNumber = random.nextInt(eight) + minHiden; // скрытое число
             int step = random.nextInt(five) + minHiden; // шаг
-        var sequence = 0;
-
-            for (int i = 0; i < ten; i++) {
-                if (i == hiddenNumber) {
-                    task[k] += ".. ";
-                    answers[k] = sequence + step;
-                    sequence = sequence + step;
+            int [] mass = new int[ten];
+            int i = 0;
+            while (i < ten) {  // заполняем массив прогрессии
+                mass[i] = initialNumber;  //есть готовый массив
+                initialNumber += step;
+                if(i == hiddenNumber) {
+                    questionAnswer[k][1] = "" + mass[i]; //записали отввет
+                }
+                i++;
+            }
+            for (int l = 0; l < ten; l++) {  //
+                if(l == 0) {
+                    questionAnswer[k][0] = "Question:";
+                }
+                if (l == hiddenNumber) {
+                    questionAnswer[k][0] += " ..";
                     continue;
                 }
-                if (i == 0) {
-                    task[k] += "Question: ";
-                    sequence = initialNumber;
-                } else {
-                    sequence = sequence + step;
-                }
-                task[k] += sequence + " ";
+                questionAnswer[k][0] += " " + mass[l];
             }
+
         }
-        Engine.progPlay(question, task, answers);
+        Engine.runGame(question,questionAnswer);
     }
 
-    public static String[] getTask() {
-        return task;
-    }
-
-    public static String getQuestion() {
-        return question;
-    }
-
-    public static int[] getAnswers() {
-        return answers;
-    }
 }
