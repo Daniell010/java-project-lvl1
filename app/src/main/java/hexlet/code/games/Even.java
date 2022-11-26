@@ -8,7 +8,9 @@ public class Even {
         return (x % 2 == 0);
     }
     public static void playEven() {
-        String[][] questionAnswer = new String[3][2];
+        final int columns = 3;
+        final int line = 2;
+        String[][] questionAnswer = new String[columns][line];
         String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         final int maxVal = 100;
         final int minVal = 1;
@@ -17,7 +19,7 @@ public class Even {
             questionAnswer[i][1] = isEven(x) ? "yes" : "no";
             questionAnswer[i][0] = ("Question: " + x);
         }
-        Engine.runGame(question,questionAnswer);
+        Engine.runGame(question, questionAnswer);
     }
 
 

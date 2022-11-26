@@ -13,7 +13,9 @@ public class GCD {
     }
     public static void playGCD() {
         String question = "Find the greatest common divisor of given numbers.";
-        String[][] questionAnswer = new String[3][2];
+        final int columns = 3;
+        final int line = 2;
+        String[][] questionAnswer = new String[columns][line];
         for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
             int[] arrayNum = new int[2];
             final int maxVal = 100;
@@ -25,9 +27,6 @@ public class GCD {
             questionAnswer[k][1] = "" + gcd(arrayNum[0], arrayNum[1]);
 
         }
-        Engine.runGame(question,questionAnswer);
+        Engine.runGame(question, questionAnswer);
     }
-
-
-
 }

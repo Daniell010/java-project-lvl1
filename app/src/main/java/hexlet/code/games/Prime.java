@@ -12,12 +12,11 @@ public class Prime {
                 && IntStream.rangeClosed(2, (int) Math.sqrt(number))
                 .noneMatch(n -> (number % n == 0));
     }
-
-
     public static void playPrime() {
         String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] questionAnswer = new String[3][2];
-
+        final int columns = 3;
+        final int line = 2;
+        String[][] questionAnswer = new String[columns][line];
         final int maxVal = 100;
         final int minVal = 1;
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
@@ -29,7 +28,7 @@ public class Prime {
                 questionAnswer[i][1] = "no";
             }
         }
-        Engine.runGame(question,questionAnswer);
+        Engine.runGame(question, questionAnswer);
     }
 
 }

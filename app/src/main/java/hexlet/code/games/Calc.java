@@ -7,7 +7,7 @@ public class Calc {
     private static char[] arrayOper = {'+', '-', '*'};
 
     public static int calculation(int operand1, int operand2, char value) {
-        int summa = 0 ;
+        int summa = 0;
         switch (value) {
             case '+':
                 summa = operand1 + operand2;
@@ -25,17 +25,18 @@ public class Calc {
         return summa;
     }
 
-
     public static void playCalc() {
         String question = "What is the result of the expression?";
-        String[][] questionAnswer = new String[3][2];
+        final int columns = 3;
+        final int line = 2;
+        String[][] questionAnswer = new String[columns][line];
         Random random = new Random();
         for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
             int[] arrayOfResponses = new int[2];
             final int maxVal = 20;
             final int minVal = 1;
-            int maxOp = 3;
-            int minOp = 0;
+            final int maxOp = 3;
+            final int minOp = 0;
             var operand1 = random.nextInt(maxVal) + minVal;
             var operand2 = random.nextInt(maxVal) + minVal;
             var operator = random.nextInt(maxOp) + minOp;
