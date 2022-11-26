@@ -22,7 +22,7 @@ public class GCD {
                 arrayNum[i] = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             }
             questionAnswer[k][0] = "Question: " + arrayNum[0] + " " + arrayNum[1];
-            questionAnswer[k][1] += gcd(arrayNum[0], arrayNum[1]);
+            questionAnswer[k][1] = "" + gcd(arrayNum[0], arrayNum[1]);
 
         }
         Engine.runGame(question,questionAnswer);
