@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
+    private static String question = "Find the greatest common divisor of given numbers.";
     public static int gcd(int a, int b) {
         while (b != 0) {
             int tmp = a % b;
@@ -12,7 +13,7 @@ public class GCD {
         return a;
     }
     public static void playGCD() {
-        String question = "Find the greatest common divisor of given numbers.";
+
         final int columns = 3;
         final int line = 2;
         String[][] questionAnswer = new String[columns][line];
@@ -24,7 +25,7 @@ public class GCD {
                 arrayNum[i] = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             }
             questionAnswer[k][0] = "Question: " + arrayNum[0] + " " + arrayNum[1];
-            questionAnswer[k][1] = "" + gcd(arrayNum[0], arrayNum[1]);
+            questionAnswer[k][1] = String.valueOf(gcd(arrayNum[0], arrayNum[1]));
 
         }
         Engine.runGame(question, questionAnswer);

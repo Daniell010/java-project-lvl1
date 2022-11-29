@@ -7,9 +7,12 @@ public class Engine {
 
     public static void runGame(String question, String[][] questionAnswer) {
 
-       var name = Cli.writeName();
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        Scanner scanner = new Scanner(System.in);
+        var name = scanner.next();
+        System.out.println("Hello, " + name + "!");
        System.out.println(question);
-       Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
             System.out.println(questionAnswer[i][0]);
             System.out.print("Your answer: ");

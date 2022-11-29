@@ -4,37 +4,39 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 
+
 public class Progression {
-
-
+         private static String question = "What number is missing in the progression?";
+         private static final int maxVal = 10;
+         private static final int minHiden = 2;
+         private static final int eight = 8;
+         private static  final int five = 5;
+         private static  final int minVal = 1;
+         private static int[] writeProgressionArray(int initialNumber, int length, int step) {
+             int i = 0;
+             int[] mass = new int[length];
+             while (i < length) {  // заполняем массив прогрессии
+                 mass[i] = initialNumber;
+                 initialNumber += step;
+                 i++;
+             }
+             return mass;
+         }
     public static void prog() {
-        String question = "What number is missing in the progression?";
+
         final int columns = 3;
         final int line = 2;
         String[][] questionAnswer = new String[columns][line];
 
         Random random = new Random();
-        final int ten = 10;
-        final int maxVal = 10;
-        final int minHiden = 2;
-        final int eight = 8;
-        final int five = 5;
-        final int minVal = 1;
+
         for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
             int initialNumber = random.nextInt(maxVal) + minVal; // начально число
             int hiddenNumber = random.nextInt(eight) + minHiden; // скрытое число
             int step = random.nextInt(five) + minHiden; // шаг
-            int[] mass = new int[ten];
-            int i = 0;
-            while (i < ten) {  // заполняем массив прогрессии
-                mass[i] = initialNumber;  //есть готовый массив
-                initialNumber += step;
-                if (i == hiddenNumber) {
-                    questionAnswer[k][1] = "" + mass[i]; //записали отввет
-                }
-                i++;
-            }
-            for (int l = 0; l < ten; l++) {  //
+            var mass = writeProgressionArray(initialNumber, 10 , step);
+            questionAnswer[k][1] = String.valueOf(mass[hiddenNumber]);
+            for (int l = 0; l < maxVal; l++) {
                 if (l == 0) {
                     questionAnswer[k][0] = "Question:";
                 }

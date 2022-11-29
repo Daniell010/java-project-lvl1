@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 
 
 public class Even {
+   private static String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static boolean isEven(int x) {
         return (x % 2 == 0);
     }
@@ -11,7 +12,7 @@ public class Even {
         final int columns = 3;
         final int line = 2;
         String[][] questionAnswer = new String[columns][line];
-        String question = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+
         final int maxVal = 100;
         final int minVal = 1;
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
