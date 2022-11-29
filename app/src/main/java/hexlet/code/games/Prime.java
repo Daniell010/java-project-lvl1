@@ -21,7 +21,7 @@ public class Prime {
         final int minVal = 1;
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             int randomNumber = (int) (Math.random() * ((maxVal - minVal) + minVal));
-            questionAnswer[i][0] = ("Question: " + randomNumber);
+            questionAnswer[i][0] = String.valueOf(randomNumber);
             questionAnswer[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
         Engine.runGame(question, questionAnswer);

@@ -12,7 +12,7 @@ public class Progression {
          private static final int EIGHT = 8;
          private static  final int FIVE = 5;
          private static  final int MIN_VAL = 1;
-         private static int[] writeProgressionArray(int initialNumber, int length, int step) {
+         private static int[] buildProgression(int initialNumber, int length, int step) {
              int i = 0;
              int[] mass = new int[length];
              while (i < length) {  // заполняем массив прогрессии
@@ -35,11 +35,11 @@ public class Progression {
             int hiddenNumber = random.nextInt(EIGHT) + MIN_HIDEN; // скрытое число
             int step = random.nextInt(FIVE) + MIN_HIDEN; // шаг
             final int length = 10;
-            var mass = writeProgressionArray(initialNumber, length, step);
+            var mass = buildProgression(initialNumber, length, step);
             questionAnswer[k][1] = String.valueOf(mass[hiddenNumber]);
             for (int l = 0; l < MAX_VAL; l++) {
                 if (l == 0) {
-                    questionAnswer[k][0] = "Question:";
+                    questionAnswer[k][0] = "";
                 }
                 if (l == hiddenNumber) {
                     questionAnswer[k][0] += " ..";

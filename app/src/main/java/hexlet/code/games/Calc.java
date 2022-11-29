@@ -42,7 +42,7 @@ public class Calc {
             var operand1 = random.nextInt(MAX_VAL) + MIN_VAL;
             var operand2 = random.nextInt(MAX_VAL) + MIN_VAL;
             var operator = random.nextInt(MAX_OP) + MIN_OP;
-            questionAnswer[k][0] = "Question: " + operand1 + " " + arrayOper[operator] + " " + operand2;
+            questionAnswer[k][0] = operand1 + " " + arrayOper[operator] + " " + operand2;
             questionAnswer[k][1] = String.valueOf(calculation(operand1, operand2, arrayOper[operator]));
 
         }

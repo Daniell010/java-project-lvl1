@@ -24,7 +24,7 @@ public class GCD {
             for (int i = 0; i < arrayNum.length; i++) {
                 arrayNum[i] = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             }
-            questionAnswer[k][0] = "Question: " + arrayNum[0] + " " + arrayNum[1];
+            questionAnswer[k][0] = arrayNum[0] + " " + arrayNum[1];
             questionAnswer[k][1] = String.valueOf(gcd(arrayNum[0], arrayNum[1]));
 
         }

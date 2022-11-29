@@ -18,7 +18,7 @@ public class Even {
         for (int i = 0; i < Engine.COUNT_ROUNDS; i++) {
             var x = (int) (Math.random() * ((maxVal - minVal) + minVal)) + minVal;
             questionAnswer[i][1] = isEven(x) ? "yes" : "no";
-            questionAnswer[i][0] = ("Question: " + x);
+            questionAnswer[i][0] = String.valueOf(x);
         }
         Engine.runGame(question, questionAnswer);
     }

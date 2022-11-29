@@ -14,7 +14,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
        System.out.println(question);
         for (int i = 0; i < COUNT_ROUNDS; i++) {
-            System.out.println(questionAnswer[i][0]);
+            System.out.println("Question: " + questionAnswer[i][0]);
             System.out.print("Your answer: ");
            var userInput = scanner.next();
            if (userInput.equals(questionAnswer[i][1])) {
