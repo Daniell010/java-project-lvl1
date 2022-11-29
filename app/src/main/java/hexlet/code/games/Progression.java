@@ -42,10 +42,14 @@ public class Progression {
                     questionAnswer[k][0] = "";
                 }
                 if (l == hiddenNumber) {
-                    questionAnswer[k][0] += " ..";
+                    questionAnswer[k][0] += ".. ";
                     continue;
                 }
-                questionAnswer[k][0] += " " + mass[l];
+                questionAnswer[k][0] += mass[l];
+                if(MAX_VAL - 1 == l) {
+                    break;
+                }
+                questionAnswer[k][0] += " ";
             }
 
         }
