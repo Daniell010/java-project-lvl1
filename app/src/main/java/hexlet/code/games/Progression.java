@@ -34,7 +34,7 @@ public class Progression {
             int initialNumber = random.nextInt(MAX_VAL) + MIN_VAL; // начально число
             int hiddenNumber = random.nextInt(EIGHT) + MIN_HIDEN; // скрытое число
             int step = random.nextInt(FIVE) + MIN_HIDEN; // шаг
-            int length = 10;
+            final int length = 10;
             var mass = writeProgressionArray(initialNumber, length, step);
             questionAnswer[k][1] = String.valueOf(mass[hiddenNumber]);
             for (int l = 0; l < MAX_VAL; l++) {
