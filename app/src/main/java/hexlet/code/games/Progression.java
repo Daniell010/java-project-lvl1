@@ -46,7 +46,7 @@ public class Progression {
                     continue;
                 }
                 questionAnswer[k][0] += mass[l];
-                if(MAX_VAL - 1 == l) {
+                if (MAX_VAL - 1 == l) {
                     break;
                 }
                 questionAnswer[k][0] += " ";
