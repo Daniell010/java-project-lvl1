@@ -6,12 +6,12 @@ import java.util.Random;
 
 
 public class Progression {
-         private static String question = "What number is missing in the progression?";
-         private static final int maxVal = 10;
-         private static final int minHiden = 2;
-         private static final int eight = 8;
-         private static  final int five = 5;
-         private static  final int minVal = 1;
+         private static final String QUESTION = "What number is missing in the progression?";
+         private static final int MAX_VAL = 10;
+         private static final int MIN_HIDEN = 2;
+         private static final int EIGHT = 8;
+         private static  final int FIVE = 5;
+         private static  final int MIN_VAL = 1;
          private static int[] writeProgressionArray(int initialNumber, int length, int step) {
              int i = 0;
              int[] mass = new int[length];
@@ -31,12 +31,13 @@ public class Progression {
         Random random = new Random();
 
         for (int k = 0; k < Engine.COUNT_ROUNDS; k++) {
-            int initialNumber = random.nextInt(maxVal) + minVal; // начально число
-            int hiddenNumber = random.nextInt(eight) + minHiden; // скрытое число
-            int step = random.nextInt(five) + minHiden; // шаг
-            var mass = writeProgressionArray(initialNumber, 10 , step);
+            int initialNumber = random.nextInt(MAX_VAL) + MIN_VAL; // начально число
+            int hiddenNumber = random.nextInt(EIGHT) + MIN_HIDEN; // скрытое число
+            int step = random.nextInt(FIVE) + MIN_HIDEN; // шаг
+            int length = 10;
+            var mass = writeProgressionArray(initialNumber, length, step);
             questionAnswer[k][1] = String.valueOf(mass[hiddenNumber]);
-            for (int l = 0; l < maxVal; l++) {
+            for (int l = 0; l < MAX_VAL; l++) {
                 if (l == 0) {
                     questionAnswer[k][0] = "Question:";
                 }
@@ -48,7 +49,7 @@ public class Progression {
             }
 
         }
-        Engine.runGame(question, questionAnswer);
+        Engine.runGame(QUESTION, questionAnswer);
     }
 
 }
